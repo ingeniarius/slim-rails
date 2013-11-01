@@ -1,4 +1,6 @@
-p#notice = notice
+h1 class="page-header" = page.header
+
+p class="alert-notice" = notice
 
 <% attributes.each do |attribute| -%>
 p
@@ -6,6 +8,6 @@ p
     = @<%= singular_table_name %>.<%= attribute.name %>
 <% end -%>
 
-= link_to 'Edit', edit_<%= singular_table_name %>_path(@<%= singular_table_name %>)
+= link_to "Edit", edit_<%= singular_table_name %>_path(@<%= singular_table_name %>)
 '|
-= link_to 'Back', <%= index_helper %>_path
+= link_to "Back", <%= index_helper %>_path
